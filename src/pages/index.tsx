@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useCallback, useEffect } from 'react';
 import styled from "styled-components";
 import { useDispatch, useSelector } from 'react-redux';
 import CreatePost from '../features/Home/CreatePost';
@@ -17,9 +17,9 @@ const IndexPage: FC = () => {
         dispatch(postsSlice.actions.fetchPostsRequested())
     }, [])
 
-    const handlePostCreate = async (post: CreatePostDTO) => {
+    const handlePostCreate = useCallback(async (post: CreatePostDTO) => {
         dispatch(postSlice.actions.createPostRequested(post))
-    }
+    }, []);
 
     return (
         <StyledContainer>
