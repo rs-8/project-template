@@ -1,6 +1,4 @@
-import { injectable } from "inversify";
-import { PostEntity } from "../model/post.entity";
-import { PostModel } from "../model/post.model";
+import { PostEntity, PostModel } from "../types/post.types";
 
 export interface IPostTransformer {
     toModel(param: PostEntity): PostModel;

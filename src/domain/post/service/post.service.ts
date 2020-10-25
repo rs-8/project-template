@@ -1,5 +1,5 @@
 import { http, HttpClient } from "../../../core/base/http";
-import { PostEntity } from "../model/post.entity";
+import { PostEntity } from "../types/post.types";
 import { CreatePostDTO } from "../dto/create-post-dto";
 
 export const createPostService = async (post: CreatePostDTO): Promise<PostEntity> => {
