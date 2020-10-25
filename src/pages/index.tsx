@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import CreatePost from '../features/Home/CreatePost';
 import Posts from '../features/Home/Posts';
 import { CreatePostDTO } from '../domain/post/dto/create-post-dto';
-import { AppDispatch, RootState } from '../store';
-import { postSlice, postsSlice } from '../store/post/post.slice';
+import { AppDispatch, RootState } from '../core/base/rootState';
+import { postSlice, postsSlice } from '../domain/post/state/post.state';
 
 const StyledContainer = styled.div``;
 

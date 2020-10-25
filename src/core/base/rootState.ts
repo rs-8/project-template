@@ -1,7 +1,14 @@
-import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
+import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
-import { postSlice, postsSlice } from './post/post.slice';
-import getSagas from './sagas';
+import { all } from 'redux-saga/effects';
+import { postSlice, postsSlice } from '../../domain/post/state/post.state';
+import { postSagas } from '../../domain/post/saga/post.saga';
+
+function* getSagas() {
+    yield all([
+        ...postSagas
+    ]);
+}
 
 const sagaMiddleware = createSagaMiddleware();
 

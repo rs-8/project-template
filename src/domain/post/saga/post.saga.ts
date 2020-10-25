@@ -1,6 +1,6 @@
 import { takeLatest, call, put, fork } from 'redux-saga/effects';
-import { createPostService, getAllPostsService } from '../../domain/post/service/post.service';
-import { postSlice, postsSlice } from './post.slice';
+import { createPostService, getAllPostsService } from '../service/post.service';
+import { postSlice, postsSlice } from '../state/post.state';
 
 export function* workerCreatePost(action) {
     try {

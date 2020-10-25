@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PostModel } from '../../domain/post/model/post.model';
-import { IPostTransformer, PostTransformer } from '../../domain/post/transform/post.transformer';
-import { CreatePostDTO } from '../../domain/post/dto/create-post-dto';
-import { PostEntity } from '../../domain/post/model/post.entity';
+import { PostModel } from '../types/post.types';
+import { PostTransformer } from '../transform/post.transformer';
+import { CreatePostDTO } from '../dto/create-post-dto';
+import { PostEntity } from '../types/post.types';
 
 type PostState = {
     isFetching: boolean;
